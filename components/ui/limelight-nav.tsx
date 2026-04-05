@@ -90,7 +90,7 @@ export const LimelightNav = ({
             {cloneElement(icon as React.ReactElement<any>, {
               className: `w-5 h-5 transition-all duration-300 ease-in-out ${
                 activeIndex === index ? 'opacity-100 text-white drop-shadow-[0_0_12px_rgba(255,255,255,0.4)]' : 'opacity-45 text-white hover:opacity-90 hover:-translate-y-[1px]'
-              } ${icon.props.className || ''} ${iconClassName || ''}`,
+              } ${(icon.props as any).className || ''} ${iconClassName || ''}`,
             })}
           </a>
       ))}
