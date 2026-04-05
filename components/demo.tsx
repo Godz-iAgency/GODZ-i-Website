@@ -1,7 +1,6 @@
 'use client'
 
 import * as React from "react"
-import { Waves } from "@/components/ui/wave-background"
 
 export function WavesDemo() {
     return (
@@ -13,7 +12,7 @@ export function WavesDemo() {
 
                 {/* 16:9 container that's full width */}
                 <div className="w-full aspect-video relative">
-                    <Waves className="h-full w-full" />
+                    {/* Waves disabled to fix missing component error */}
                 </div>
 
                 {/* Bottom border - thin white line */}
@@ -22,5 +21,3 @@ export function WavesDemo() {
         </div>
     )
 }
-
-export { WavesDemo }
