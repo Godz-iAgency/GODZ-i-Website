@@ -1,0 +1,200 @@
+@import "tailwindcss";
+@import "@fontsource/montserrat/400.css";
+@import "@fontsource/montserrat/500.css";
+@import "@fontsource/montserrat/600.css";
+@import "@fontsource/montserrat/700.css";
+@import "@fontsource/montserrat/800.css";
+@import "@fontsource/montserrat/900.css";
+
+@theme inline {
+  --color-background: #050507;
+  --color-foreground: #f4f4f5;
+  --color-accent: #E8430A;
+  --color-accent-dark: #c93a08;
+  --color-accent-light: #ff6b35;
+  --color-surface: #08080d;
+  --color-surface-2: #0c0c12;
+  --color-surface-3: #101018;
+  --color-surface-elevated: #16161f;
+  --color-border: rgba(255, 255, 255, 0.05);
+  --color-border-hover: rgba(255, 255, 255, 0.1);
+  --color-muted: #71717a;
+  --color-text-secondary: #a1a1aa;
+  --font-sans: "Montserrat", system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-geist-mono);
+}
+
+/* === Reset === */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(232, 67, 10, 0.35);
+  color: #fff;
+}
+
+section {
+  scroll-margin-top: 88px;
+}
+
+/* === Grain Overlay === */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.02;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 128px 128px;
+}
+
+/* === Gradient Text === */
+.gradient-text {
+  background: linear-gradient(135deg, #E8430A 0%, #ff6b35 50%, #E8430A 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-shift 4s ease-in-out infinite;
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% center; }
+  50% { background-position: 200% center; }
+}
+
+/* === Glow Pulse for CTA === */
+.glow-pulse {
+  animation: glow-ring 3s ease-in-out infinite;
+}
+
+@keyframes glow-ring {
+  0%, 100% { box-shadow: 0 0 24px rgba(232, 67, 10, 0.12), 0 0 80px rgba(232, 67, 10, 0.04); }
+  50% { box-shadow: 0 0 36px rgba(232, 67, 10, 0.28), 0 0 100px rgba(232, 67, 10, 0.1); }
+}
+
+/* === Card Gradient Border === */
+.card-gradient-border {
+  position: relative;
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  transition: border-color 0.5s ease, box-shadow 0.5s ease, transform 0.5s ease;
+}
+
+.card-gradient-border:hover {
+  border-color: rgba(232, 67, 10, 0.2);
+  box-shadow:
+    0 8px 40px rgba(232, 67, 10, 0.06),
+    0 0 0 1px rgba(232, 67, 10, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.02);
+}
+
+/* === Section Spacing — tighter on mobile for app feel === */
+.section-spacing {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+  .section-spacing {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-spacing {
+    padding-top: 11rem;
+    padding-bottom: 11rem;
+  }
+}
+
+/* === Video Styling === */
+.hero-video {
+  mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+}
+
+/* === Animated Gradient Border Utility === */
+.animated-border {
+  position: relative;
+  z-index: 0;
+}
+
+.animated-border::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    rgba(232, 67, 10, 0.15),
+    transparent 40%,
+    transparent 60%,
+    rgba(232, 67, 10, 0.08)
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  pointer-events: none;
+}
+
+.animated-border:hover::before {
+  opacity: 1;
+}
+
+/* === Section divider === */
+.section-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+}
+
+/* === Scrollbar === */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* === Smooth link transitions === */
+a {
+  transition: color 0.3s ease;
+}
