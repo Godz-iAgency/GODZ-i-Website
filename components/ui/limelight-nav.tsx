@@ -79,7 +79,7 @@ export const LimelightNav = ({
           <a
             key={id}
             href={href}
-            ref={el => (navItemRefs.current[index] = el)}
+            ref={el => { navItemRefs.current[index] = el as HTMLAnchorElement }}
             className={`relative z-20 flex h-full cursor-pointer items-center justify-center p-4 ${iconContainerClassName}`}
             onClick={(e) => {
               if (!href) e.preventDefault();
