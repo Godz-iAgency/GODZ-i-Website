@@ -65,7 +65,7 @@ export function Navigation() {
             href="https://www.linkedin.com/in/christopher-downer/"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden sm:flex items-center justify-center w-9 h-9 rounded-full border border-white/[0.06] hover:border-accent/40 hover:bg-accent/10 transition-all duration-300"
+            className="flex items-center justify-center w-9 h-9 rounded-full border border-white/[0.06] hover:border-accent/40 hover:bg-accent/10 transition-all duration-300"
             aria-label="Christopher Downer on LinkedIn"
           >
             <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 fill-zinc-400 hover:fill-white transition-colors">
@@ -108,13 +108,14 @@ export function Navigation() {
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
             className="lg:hidden overflow-hidden bg-[#050507]/98 backdrop-blur-2xl border-b border-white/[0.04]"
           >
-            <div className="px-6 py-8 flex flex-col gap-1">
+            <div className="px-6 py-8 flex items-stretch flex-col gap-1">
               {NAV_LINKS.map(({ label, href }) => (
                 <a
                   key={label}
                   href={href}
                   onClick={() => setMobileOpen(false)}
-                  className="flex items-center px-4 py-3.5 rounded-xl text-zinc-400 hover:text-white hover:bg-white/[0.03] transition-all duration-200 text-sm font-medium tracking-wide"
+                  className="flex items-center w-full px-4 py-3.5 rounded-xl text-zinc-400 hover:text-white hover:bg-white/[0.03] transition-all duration-200 text-sm font-medium tracking-wide cursor-pointer tap-highlight-transparent"
+                  style={{ WebkitTapHighlightColor: 'transparent' }}
                 >
                   {label}
                 </a>
@@ -124,7 +125,8 @@ export function Navigation() {
                   href="https://cal.com/christopher-downer-6pkxir/strategy-session"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-5 py-3.5 bg-accent text-white text-sm font-bold tracking-wide uppercase rounded-xl"
+                  className="inline-flex items-center justify-center w-full px-5 py-3.5 bg-accent text-white text-sm font-bold tracking-wide uppercase rounded-xl cursor-pointer tap-highlight-transparent"
+                  style={{ WebkitTapHighlightColor: 'transparent' }}
                   onClick={() => setMobileOpen(false)}
                 >
                   Book a Strategy Session

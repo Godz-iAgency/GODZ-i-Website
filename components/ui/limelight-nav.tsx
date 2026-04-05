@@ -52,7 +52,7 @@ export const LimelightNav = ({
 
     const limelight = limelightRef.current;
     const activeItem = navItemRefs.current[activeIndex];
-    
+
     if (limelight && activeItem) {
       const newLeft = activeItem.offsetLeft + activeItem.offsetWidth / 2 - limelight.offsetWidth / 2;
       limelight.style.left = `${newLeft}px`;
@@ -64,7 +64,7 @@ export const LimelightNav = ({
   }, [activeIndex, isReady, items]);
 
   if (items.length === 0) {
-    return null; 
+    return null;
   }
 
   const handleItemClick = (index: number, itemOnClick?: () => void) => {
@@ -76,30 +76,27 @@ export const LimelightNav = ({
   return (
     <nav className={`relative inline-flex items-center h-14 rounded-full bg-slate-900/85 backdrop-blur-md shadow-[0_4px_24px_rgba(0,0,0,0.15),inset_0_1px_0_rgba(255,255,255,0.1)] border border-white/5 px-2 ${className}`}>
       {items.map(({ id, icon, label, onClick, href }, index) => (
-          <a
-            key={id}
-            href={href}
-            ref={el => { navItemRefs.current[index] = el as HTMLAnchorElement }}
-            className={`relative z-20 flex h-full cursor-pointer items-center justify-center p-4 ${iconContainerClassName}`}
-            onClick={(e) => {
-              if (!href) e.preventDefault();
-              handleItemClick(index, onClick);
-            }}
-            aria-label={label}
-          >
-            {cloneElement(icon as React.ReactElement<any>, {
-              className: `w-5 h-5 transition-all duration-300 ease-in-out ${
-                activeIndex === index ? 'opacity-100 text-white drop-shadow-[0_0_12px_rgba(255,255,255,0.4)]' : 'opacity-45 text-white hover:opacity-90 hover:-translate-y-[1px]'
+        <a
+          key={id}
+          href={href}
+          ref={el => { navItemRefs.current[index] = el as HTMLAnchorElement }}
+          className={`relative z-20 flex h-full cursor-pointer items-center justify-center p-4 ${iconContainerClassName}`}
+          onClick={(e) => {
+            if (!href) e.preventDefault();
+            handleItemClick(index, onClick);
+          }}
+          aria-label={label}
+        >
+          {cloneElement(icon as React.ReactElement<any>, {
+            className: `w-5 h-5 transition-all duration-300 ease-in-out ${activeIndex === index ? 'opacity-100 text-white drop-shadow-[0_0_12px_rgba(255,255,255,0.4)]' : 'opacity-45 text-white hover:opacity-90 hover:-translate-y-[1px]'
               } ${(icon.props as any).className || ''} ${iconClassName || ''}`,
-            })}
-          </a>
+          })}
+        </a>
       ))}
 
-      <div 
+      <div
         ref={limelightRef}
-        className={`absolute top-0 z-10 w-9 h-1 rounded-b-md bg-primary shadow-[0_4px_15px_rgba(232,67,10,0.6),0_0_5px_rgba(232,67,10,0.4)] ${
-          isReady ? 'transition-[left] duration-400 ease-in-out' : ''
-        } ${limelightClassName}`}
+        className={`absolute top-0 z-10 w-9 h-1 rounded-b-md bg-primary shadow-[0_4px_15px_rgba(232,67,10,0.6),0_0_5px_rgba(232,67,10,0.4)] ${isReady ? 'transition-[left] duration-400 ease-in-out' : ''} ${limelightClassName}`}
         style={{ left: '-999px' }}
       >
         <div className="absolute left-[-50%] top-[4px] w-[200%] h-10 [clip-path:polygon(10%_100%,30%_0,70%_0,90%_100%)] bg-gradient-to-b from-primary/40 via-primary/5 to-transparent pointer-events-none" />
