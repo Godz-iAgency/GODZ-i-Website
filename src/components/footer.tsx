@@ -6,7 +6,7 @@ export function Footer() {
       {/* Top gradient accent */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[280px] h-px bg-gradient-to-r from-transparent via-accent/25 to-transparent" />
 
-      <div className="max-w-[1280px] mx-auto px-6 md:px-10 flex flex-wrap items-center justify-between gap-8">
+      <div className="max-w-7xl w-full mx-auto px-6 md:px-10 flex flex-wrap items-center justify-between gap-8">
         {/* Logo */}
         <a href="#hero" className="flex items-center group">
           <Image

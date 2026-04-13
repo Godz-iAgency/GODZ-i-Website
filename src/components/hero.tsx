@@ -8,7 +8,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-[100dvh] flex items-center overflow-hidden"
+      className="relative min-h-[100dvh] flex flex-col justify-center items-center w-full overflow-hidden"
     >
       {/* Deep ambient gradients */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(232,67,10,0.07),transparent_60%)]" />
@@ -23,7 +23,7 @@ export function Hero() {
         }}
       />
 
-      <div className="max-w-[1280px] mx-auto px-6 md:px-10 w-full pt-[120px] pb-20 md:pt-[140px] md:pb-28 lg:pt-[160px] lg:pb-32">
+      <div className="max-w-7xl w-full mx-auto px-6 md:px-10 pt-[120px] pb-16 md:pt-[140px] md:pb-20 lg:pt-[160px] lg:pb-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-12 items-center">
           {/* Left: Content */}
           <div className="order-2 lg:order-1 relative z-10">
@@ -45,32 +45,37 @@ export function Hero() {
             </Reveal>
 
             <Reveal delay={0.2}>
-              <p className="text-base md:text-lg text-zinc-400 leading-relaxed max-w-[46ch] mb-12">
+              <p className="text-base md:text-lg text-zinc-300 leading-relaxed max-w-[46ch] mb-12">
                 We help marketing agencies generate leads, produce content, and
                 run operations without adding headcount.
               </p>
             </Reveal>
 
             <Reveal delay={0.3}>
-              <div className="flex flex-wrap items-center gap-5">
-                <MagneticButton
-                  href="https://cal.com/christopher-downer-6pkxir/strategy-session"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center px-9 py-[18px] bg-accent hover:bg-accent-light text-white text-sm font-bold tracking-[0.06em] uppercase rounded-xl glow-pulse transition-all duration-300"
-                  strength={0.12}
-                >
-                  Book a Free Strategy Session
-                </MagneticButton>
-                <a
-                  href="#two-path"
-                  className="inline-flex items-center gap-2 px-6 py-4 text-sm font-medium text-zinc-500 hover:text-zinc-200 transition-colors duration-300"
-                >
-                  Learn more
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                  </svg>
-                </a>
+              <div className="flex flex-col gap-5">
+                <div className="flex flex-wrap items-center gap-6">
+                  <MagneticButton
+                    href="https://cal.com/christopher-downer-6pkxir/strategy-session"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center px-9 py-[18px] bg-accent hover:bg-accent-light text-white text-sm font-bold tracking-[0.06em] uppercase rounded-xl glow-pulse transition-all duration-300"
+                    strength={0.12}
+                  >
+                    Book a Free Strategy Session
+                  </MagneticButton>
+                  <a
+                    href="#process"
+                    className="inline-flex items-center gap-2 px-6 py-4 text-sm font-medium text-zinc-300 hover:text-white transition-colors duration-300"
+                  >
+                    Learn more
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </a>
+                </div>
+                <p className="text-sm md:text-base font-medium text-zinc-400 pl-1 w-full shrink-0">
+                  No commitment. 30-minute call. We will tell you exactly what to build.
+                </p>
               </div>
             </Reveal>
           </div>

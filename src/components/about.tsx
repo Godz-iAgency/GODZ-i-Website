@@ -15,12 +15,12 @@ export function About() {
   return (
     <section
       id="about"
-      className="relative section-spacing bg-surface-2 overflow-hidden"
+      className="relative flex flex-col items-center w-full section-spacing bg-surface-2 overflow-hidden"
     >
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.05] to-transparent" />
       <div className="absolute top-[30%] right-[-5%] w-[500px] h-[500px] rounded-full bg-accent/[0.025] blur-[160px] pointer-events-none" />
 
-      <div className="max-w-[1280px] mx-auto px-6 md:px-10">
+      <div className="max-w-7xl w-full mx-auto px-6 md:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-20 lg:gap-24 items-center">
           {/* Left: Copy */}
           <div>
@@ -36,7 +36,7 @@ export function About() {
               </h2>
             </Reveal>
             <Reveal delay={0.2}>
-              <p className="text-[15px] md:text-base text-zinc-400 leading-[1.85] mb-12 max-w-[55ch]">
+              <p className="text-[15px] md:text-base text-zinc-300 leading-[1.85] mb-12 max-w-[55ch]">
                 I&apos;m Christopher Downer, founder of GODZ-i, based in
                 Austin, Texas. GODZ-i operates with a dedicated technical
                 delivery team that designs, builds, and maintains AI automation
@@ -102,7 +102,7 @@ export function About() {
                     <div className="text-xl md:text-2xl font-bold text-accent tracking-tight group-hover:scale-105 transition-transform duration-300">
                       {value}
                     </div>
-                    <div className="text-[10px] text-zinc-500 uppercase tracking-[0.14em] mt-2 font-semibold">
+                    <div className="text-[10px] text-zinc-400 uppercase tracking-[0.14em] mt-2 font-semibold">
                       {label}
                     </div>
                   </div>

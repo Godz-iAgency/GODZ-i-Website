@@ -32,10 +32,10 @@ const STEPS = [
 
 export function Process() {
   return (
-    <section id="process" className="relative section-spacing overflow-hidden bg-surface">
+    <section id="process" className="relative flex flex-col items-center w-full section-spacing overflow-hidden bg-surface">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.05] to-transparent" />
 
-      <div className="max-w-[1280px] mx-auto px-6 md:px-10">
+      <div className="max-w-7xl w-full mx-auto px-6 md:px-10">
         <div className="mb-20 md:mb-24">
           <Reveal>
             <span className="inline-flex items-center gap-2.5 text-[11px] font-semibold tracking-[0.2em] uppercase text-accent/80 mb-7">
@@ -80,7 +80,7 @@ export function Process() {
                   <h3 className="relative z-10 text-lg font-bold tracking-tight text-white uppercase mb-4">
                     {title}
                   </h3>
-                  <p className="relative z-10 text-[14px] text-zinc-500 leading-relaxed">
+                  <p className="relative z-10 text-[14px] text-zinc-400 leading-relaxed">
                     {description}
                   </p>
                 </motion.div>

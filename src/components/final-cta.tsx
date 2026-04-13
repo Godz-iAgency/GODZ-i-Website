@@ -5,7 +5,7 @@ import { Reveal } from "@/components/ui/reveal";
 
 export function FinalCTA() {
   return (
-    <section id="cta" className="relative section-spacing overflow-hidden">
+    <section id="cta" className="relative flex flex-col items-center w-full section-spacing overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.05] to-transparent" />
 
       {/* Large accent glow in center */}
@@ -23,7 +23,7 @@ export function FinalCTA() {
         }}
       />
 
-      <div className="max-w-[1280px] mx-auto px-6 md:px-10 text-center relative z-10">
+      <div className="max-w-7xl w-full mx-auto px-6 md:px-10 text-center relative z-10">
         <Reveal>
           <span className="inline-flex items-center gap-2.5 text-[11px] font-semibold tracking-[0.2em] uppercase text-accent/60 mb-10 justify-center">
             <span className="w-8 h-px bg-accent/25" />
@@ -39,7 +39,7 @@ export function FinalCTA() {
           </h2>
         </Reveal>
         <Reveal delay={0.15}>
-          <p className="text-lg md:text-xl text-zinc-400 mb-14 font-medium">
+          <p className="text-lg md:text-xl text-zinc-300 mb-14 font-medium">
             We&apos;ll fix it in 30 minutes.
           </p>
         </Reveal>
@@ -56,6 +56,11 @@ export function FinalCTA() {
               <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
             </svg>
           </MagneticButton>
+        </Reveal>
+        <Reveal delay={0.3} className="w-full flex justify-center">
+          <p className="mt-5 text-[13px] md:text-sm text-zinc-400 font-medium max-w-[520px] leading-relaxed text-center">
+            We take on a limited number of new agency builds each quarter. If you are ready to fix the systems problem, book your call now.
+          </p>
         </Reveal>
       </div>
     </section>

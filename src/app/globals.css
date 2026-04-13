@@ -119,15 +119,15 @@ body::after {
 
 @media (min-width: 768px) {
   .section-spacing {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
   }
 }
 
 @media (min-width: 1024px) {
   .section-spacing {
-    padding-top: 11rem;
-    padding-bottom: 11rem;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
   }
 }
 

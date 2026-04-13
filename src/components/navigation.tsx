@@ -25,13 +25,13 @@ export function Navigation() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-50 flex flex-col items-center w-full transition-all duration-500 ${
         scrolled
           ? "bg-[#050507]/90 backdrop-blur-2xl border-b border-white/[0.04] shadow-[0_4px_30px_rgba(0,0,0,0.4)]"
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-[1280px] mx-auto px-6 md:px-10 h-[80px] flex items-center justify-between">
+      <div className="max-w-7xl w-full mx-auto px-6 md:px-10 h-[80px] flex items-center justify-between">
         {/* Logo */}
         <a href="#hero" className="flex items-center gap-2.5 shrink-0 group">
           <Image
@@ -50,7 +50,7 @@ export function Navigation() {
             <a
               key={label}
               href={href}
-              className="relative px-4 py-2 text-[13px] font-medium tracking-wide text-zinc-400 hover:text-white transition-colors duration-300 group"
+              className="relative px-4 py-2 text-[13px] font-medium tracking-wide text-zinc-300 hover:text-white transition-colors duration-300 group"
             >
               {label}
               <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-accent rounded-full group-hover:w-5 transition-all duration-300" />
@@ -114,7 +114,7 @@ export function Navigation() {
                   key={label}
                   href={href}
                   onClick={() => setMobileOpen(false)}
-                  className="flex items-center w-full px-4 py-3.5 rounded-xl text-zinc-400 hover:text-white hover:bg-white/[0.03] transition-all duration-200 text-sm font-medium tracking-wide cursor-pointer tap-highlight-transparent"
+                  className="flex items-center w-full px-4 py-3.5 rounded-xl text-zinc-300 hover:text-white hover:bg-white/[0.03] transition-all duration-200 text-sm font-medium tracking-wide cursor-pointer tap-highlight-transparent"
                   style={{ WebkitTapHighlightColor: 'transparent' }}
                 >
                   {label}

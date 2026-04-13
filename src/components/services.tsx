@@ -35,12 +35,12 @@ export function Services() {
   return (
     <section
       id="services"
-      className="relative section-spacing bg-surface-2 overflow-hidden"
+      className="relative flex flex-col items-center w-full section-spacing bg-surface-2 overflow-hidden"
     >
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.05] to-transparent" />
       <div className="absolute bottom-[-10%] right-[-5%] w-[500px] h-[500px] rounded-full bg-accent/[0.02] blur-[140px] pointer-events-none" />
 
-      <div className="max-w-[1280px] mx-auto px-6 md:px-10">
+      <div className="max-w-7xl w-full mx-auto px-6 md:px-10">
         <div className="mb-20 md:mb-24">
           <Reveal>
             <span className="inline-flex items-center gap-2.5 text-[11px] font-semibold tracking-[0.2em] uppercase text-accent/80 mb-7">
@@ -85,7 +85,7 @@ export function Services() {
                   <h3 className="text-lg md:text-xl font-bold tracking-tight text-white mb-4">
                     {title}
                   </h3>
-                  <p className="text-[14px] md:text-[15px] text-zinc-500 leading-relaxed">
+                  <p className="text-[14px] md:text-[15px] text-zinc-400 leading-relaxed">
                     {description}
                   </p>
                 </motion.div>
