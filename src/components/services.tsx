@@ -53,6 +53,11 @@ export function Services() {
               What We Build For Agencies.
             </h2>
           </Reveal>
+          <Reveal delay={0.2}>
+            <p className="mt-5 text-sm text-zinc-500 max-w-2xl">
+              Engagements are priced based on scope and complexity. Book a call to get your custom quote.
+            </p>
+          </Reveal>
         </div>
 
         <StaggerContainer

@@ -18,27 +18,6 @@ const PROOFS = [
     description:
       "Saves 10-15 hours per week — content ideas generated and stored in Google Sheets automatically.",
   },
-  {
-    num: "03",
-    title: "Interactive Booking EPK",
-    client: "Ras Mundi Music — Austin, TX",
-    description:
-      "Interactive EPK with integrated booking — professional digital presence for talent.",
-  },
-  {
-    num: "04",
-    title: "Badge Tracking Automation",
-    client: "FENIX LOGISTIX — Austin International Airport",
-    description:
-      "Proactive badge expiration alerts — zero compliance violations since deployment.",
-  },
-  {
-    num: "05",
-    title: "ULD Count Calculator",
-    client: "Cargo Air Operations",
-    description:
-      "Eliminated manual ULD count errors — increased operational accuracy for ramp teams.",
-  },
 ];
 
 export function Proof() {
@@ -62,15 +41,8 @@ export function Proof() {
         </div>
 
         <StaggerContainer staggerDelay={0.06}>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-6 mb-5 lg:mb-6">
-            {PROOFS.slice(0, 3).map((proof) => (
-              <StaggerItem key={proof.num}>
-                <ProofCard {...proof} />
-              </StaggerItem>
-            ))}
-          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-6">
-            {PROOFS.slice(3).map((proof) => (
+            {PROOFS.map((proof) => (
               <StaggerItem key={proof.num}>
                 <ProofCard {...proof} />
               </StaggerItem>

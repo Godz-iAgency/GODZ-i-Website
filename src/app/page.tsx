@@ -4,7 +4,10 @@ import { TwoPath } from "@/components/two-path";
 import { Problem } from "@/components/problem";
 import { Process } from "@/components/process";
 import { Services } from "@/components/services";
+import { Technology } from "@/components/technology";
 import { Proof } from "@/components/proof";
+import { FounderStory } from "@/components/founder-story";
+import { Testimonials } from "@/components/testimonials";
 import { About } from "@/components/about";
 import { FinalCTA } from "@/components/final-cta";
 import { Footer } from "@/components/footer";
@@ -19,7 +22,10 @@ export default function Home() {
         <Problem />
         <Process />
         <Services />
+        <Technology />
         <Proof />
+        <FounderStory />
+        <Testimonials />
         <About />
         <FinalCTA />
       </main>

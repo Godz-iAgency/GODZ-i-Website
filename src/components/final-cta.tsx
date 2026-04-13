@@ -39,8 +39,13 @@ export function FinalCTA() {
           </h2>
         </Reveal>
         <Reveal delay={0.15}>
-          <p className="text-lg md:text-xl text-zinc-300 mb-14 font-medium">
+          <p className="text-lg md:text-xl text-zinc-300 mb-6 font-medium">
             We&apos;ll fix it in 30 minutes.
+          </p>
+        </Reveal>
+        <Reveal delay={0.2}>
+          <p className="text-sm text-accent/80 font-semibold tracking-wide uppercase mb-12">
+            Currently accepting 3 founding clients
           </p>
         </Reveal>
         <Reveal delay={0.25}>
