@@ -30,7 +30,7 @@ export function FounderStory() {
             </Reveal>
             <Reveal delay={0.2}>
               <p className="mt-6 text-base md:text-lg text-accent/80 font-semibold leading-relaxed border-l-2 border-accent/30 pl-5">
-                &ldquo;I got tired of watching talented agency founders burn out doing work a system could do.&rdquo;
+                &ldquo;I got tired of watching talented people burn out doing work a system could do.&rdquo;
               </p>
             </Reveal>
           </div>
@@ -39,30 +39,25 @@ export function FounderStory() {
           <div className="space-y-8">
             <Reveal delay={0.15}>
               <p className="text-[16px] md:text-[17px] text-zinc-300 leading-[1.85]">
-                I spent years inside marketing agencies — watching founders who were brilliant at their craft get buried in operational chaos. The pipeline would dry up the moment delivery got busy. Content fell behind because every new client meant more manual hours. And the founder? Stuck in the weeds instead of building a business.
+                I got tired of watching talented people burn out doing work a system could do. I spent 20 years in the music industry learning how to build momentum from nothing. Then I moved into logistics where I learned systems, operations, supply chain management, and how to hold complex processes together simultaneously.
               </p>
             </Reveal>
             <Reveal delay={0.2}>
               <p className="text-[16px] md:text-[17px] text-zinc-300 leading-[1.85]">
-                That cycle isn&apos;t a talent problem. It&apos;s a systems problem. And I knew AI could break it — if someone built the right systems instead of just selling tools and templates.
+                When I discovered Elon Musk&apos;s Algorithm, everything clicked. Question every requirement. Delete what is unnecessary. Simplify what remains. Accelerate the process. Then and only then, automate. Most agencies skip straight to automation without doing the first four steps. That is why their systems break.
               </p>
             </Reveal>
             <Reveal delay={0.25}>
               <p className="text-[16px] md:text-[17px] text-zinc-300 leading-[1.85]">
-                So I built GODZ-i. Not a SaaS. Not a course. A hands-on automation agency that goes inside your operation, finds exactly where you&apos;re bleeding time and money, and replaces it with infrastructure that runs without you.
-              </p>
-            </Reveal>
-            <Reveal delay={0.3}>
-              <p className="text-[16px] md:text-[17px] text-zinc-400 leading-[1.85]">
-                Every system we build is scoped to your agency, integrated into your stack, and built to outlast any trend. The result isn&apos;t just saved hours — it&apos;s a business you can actually scale.
+                I built GODZ-i to apply that exact framework to marketing agencies. We go inside your operation, map every process, delete the waste, simplify what remains, and then build automation that actually holds. Not a SaaS. Not a course. A hands-on agency that replaces founder dependent chaos with infrastructure that runs without you.
               </p>
             </Reveal>
 
             {/* Signature line */}
-            <Reveal delay={0.35}>
+            <Reveal delay={0.3}>
               <div className="pt-4 border-t border-white/[0.06]">
                 <p className="text-sm font-bold text-white tracking-wide">Christopher Downer</p>
-                <p className="text-xs text-zinc-500 mt-1 tracking-[0.08em] uppercase">Founder, GODZ-i · Austin, Texas</p>
+                <p className="text-xs text-zinc-500 mt-1 tracking-[0.08em] uppercase">Founder, GODZ-i, Austin Texas</p>
               </div>
             </Reveal>
           </div>

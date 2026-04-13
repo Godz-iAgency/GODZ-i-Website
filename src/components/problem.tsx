@@ -39,7 +39,7 @@ export function Problem() {
       <div className="absolute bottom-[-10%] right-[-5%] w-[400px] h-[400px] rounded-full bg-accent/[0.02] blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl w-full mx-auto px-6 md:px-10">
-        <div className="mb-20 md:mb-24">
+        <div className="mb-12 md:mb-16">
           <Reveal>
             <span className="inline-flex items-center gap-2.5 text-[11px] font-semibold tracking-[0.2em] uppercase text-accent/80 mb-7">
               <span className="w-10 h-px bg-accent/40" />

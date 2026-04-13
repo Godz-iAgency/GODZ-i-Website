@@ -21,7 +21,7 @@ const TESTIMONIALS = [
     title: "Founder",
     company: "Assemble at Ease",
     url: "https://assembleatease.com",
-    photo: "/travis_gobson.png",
+    photo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23a1a1aa'%3E%3Cpath d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/%3E%3C/svg%3E",
   },
   {
     quote:
@@ -30,7 +30,7 @@ const TESTIMONIALS = [
     title: "Founder",
     company: "Zoom Out Social",
     url: "https://zoomoutsocial.com",
-    photo: "/andrew_knor.jpg",
+    photo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23a1a1aa'%3E%3Cpath d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/%3E%3C/svg%3E",
   },
 ];
 
@@ -43,7 +43,7 @@ export function Testimonials() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.05] to-transparent" />
 
       <div className="max-w-7xl w-full mx-auto px-6 md:px-10">
-        <div className="mb-20 md:mb-24 flex flex-col items-center text-center">
+        <div className="mb-12 md:mb-16 flex flex-col items-center text-center">
           <Reveal>
             <span className="inline-flex items-center gap-2.5 text-[11px] font-semibold tracking-[0.2em] uppercase text-accent/80 mb-7">
               <span className="w-10 h-px bg-accent/40" />

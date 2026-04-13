@@ -33,7 +33,7 @@ export function TwoPath() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.05] to-transparent" />
 
       <div className="max-w-7xl w-full mx-auto px-6 md:px-10">
-        <div className="text-center mb-20 md:mb-24">
+        <div className="text-center mb-12 md:mb-16">
           <Reveal>
             <h2 className="text-3xl md:text-5xl lg:text-[3.5rem] font-extrabold tracking-[-0.03em] text-white leading-tight">
               Two Ways We Help

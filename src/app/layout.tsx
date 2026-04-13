@@ -17,7 +17,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: "GODZ-i | AI Automation Systems for Marketing Agencies",
   description:
-    "GODZ-i helps marketing agency founders scale without adding headcount — through AI-powered lead generation, content production, and operations automation. Book a free strategy session.",
+    "AI automation systems built for marketing agencies. We automate content generation, client onboarding, lead follow up, reporting, and GEO SEO so you can scale without adding headcount.",
   robots: "index, follow",
   openGraph: {
     title: "GODZ-i | AI Automation Systems for Marketing Agencies",

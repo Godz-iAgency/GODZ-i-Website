@@ -10,6 +10,7 @@ const NAV_LINKS = [
   { label: "Solutions", href: "#two-path" },
   { label: "Process", href: "#process" },
   { label: "Work", href: "#proof" },
+  { label: "Testimonials", href: "#testimonials" },
   { label: "About", href: "#about" },
 ];
 
@@ -22,6 +23,17 @@ export function Navigation() {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleMobileNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+    e.preventDefault();
+    setMobileOpen(false);
+    setTimeout(() => {
+      const element = document.getElementById(targetId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 150);
+  };
 
   return (
     <header
@@ -106,20 +118,15 @@ export function Navigation() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
-            className="lg:hidden w-full overflow-hidden bg-[#050507]/98 backdrop-blur-2xl border-b border-white/[0.04]"
+            className="lg:hidden w-full overflow-hidden bg-[#050507] border-b border-white/[0.04]"
           >
             <div className="px-6 py-8 flex items-stretch flex-col gap-1">
-              {NAV_LINKS.map(({ label, href }) => (
-                <a
-                  key={label}
-                  href={href}
-                  onClick={() => setMobileOpen(false)}
-                  className="flex items-center w-full px-4 py-3.5 rounded-xl text-zinc-300 hover:text-white hover:bg-white/[0.03] transition-all duration-200 text-sm font-medium tracking-wide cursor-pointer tap-highlight-transparent"
-                  style={{ WebkitTapHighlightColor: 'transparent' }}
-                >
-                  {label}
-                </a>
-              ))}
+              <a href="#hero" onClick={(e) => handleMobileNavClick(e, 'hero')} className="flex items-center w-full px-4 py-3.5 rounded-xl text-zinc-300 hover:text-white hover:bg-white/[0.03] transition-all duration-200 text-sm font-medium tracking-wide cursor-pointer tap-highlight-transparent" style={{ WebkitTapHighlightColor: 'transparent' }}>Home</a>
+              <a href="#two-path" onClick={(e) => handleMobileNavClick(e, 'two-path')} className="flex items-center w-full px-4 py-3.5 rounded-xl text-zinc-300 hover:text-white hover:bg-white/[0.03] transition-all duration-200 text-sm font-medium tracking-wide cursor-pointer tap-highlight-transparent" style={{ WebkitTapHighlightColor: 'transparent' }}>Solutions</a>
+              <a href="#process" onClick={(e) => handleMobileNavClick(e, 'process')} className="flex items-center w-full px-4 py-3.5 rounded-xl text-zinc-300 hover:text-white hover:bg-white/[0.03] transition-all duration-200 text-sm font-medium tracking-wide cursor-pointer tap-highlight-transparent" style={{ WebkitTapHighlightColor: 'transparent' }}>Process</a>
+              <a href="#proof" onClick={(e) => handleMobileNavClick(e, 'proof')} className="flex items-center w-full px-4 py-3.5 rounded-xl text-zinc-300 hover:text-white hover:bg-white/[0.03] transition-all duration-200 text-sm font-medium tracking-wide cursor-pointer tap-highlight-transparent" style={{ WebkitTapHighlightColor: 'transparent' }}>Work</a>
+              <a href="#testimonials" onClick={(e) => handleMobileNavClick(e, 'testimonials')} className="flex items-center w-full px-4 py-3.5 rounded-xl text-zinc-300 hover:text-white hover:bg-white/[0.03] transition-all duration-200 text-sm font-medium tracking-wide cursor-pointer tap-highlight-transparent" style={{ WebkitTapHighlightColor: 'transparent' }}>Testimonials</a>
+              <a href="#about" onClick={(e) => handleMobileNavClick(e, 'about')} className="flex items-center w-full px-4 py-3.5 rounded-xl text-zinc-300 hover:text-white hover:bg-white/[0.03] transition-all duration-200 text-sm font-medium tracking-wide cursor-pointer tap-highlight-transparent" style={{ WebkitTapHighlightColor: 'transparent' }}>About</a>
               <div className="mt-6 pt-6 border-t border-white/[0.04] flex flex-col gap-3">
                 <a
                   href="https://cal.com/christopher-downer-6pkxir/strategy-session"

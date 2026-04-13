@@ -7,27 +7,27 @@ import { Cpu, Network, Zap, ShieldCheck } from "lucide-react";
 const TECHNOLOGIES = [
   {
     icon: Network,
-    title: "Multi-Agent Architectures",
+    title: "Marketing Intelligence Agent",
     description:
-      "We don't just use ChatGPT wrappers. We build specialized, communicating LLM agents that handle distinct parts of your agency's workflows autonomously.",
+      "Audits your entire marketing operation and identifies exactly where you are losing leads and conversions.",
   },
   {
     icon: Zap,
-    title: "Headless Automations",
+    title: "Advertising Strategy Agent",
     description:
-      "Our systems run in the background via intelligent webhooks and API integrations connecting your CRM, Slack, and delivery tools seamlessly.",
+      "Analyzes your ad spend across all platforms and identifies waste, targeting gaps, and optimization opportunities.",
   },
   {
     icon: Cpu,
-    title: "Custom Data Processing",
+    title: "Sales Research Agent",
     description:
-      "We build vector databases and RAG (Retrieval-Augmented Generation) systems trained specifically on your agency's past performance and brand voice.",
+      "Maps your prospect landscape, identifies decision makers, and generates personalized outreach sequences automatically.",
   },
   {
     icon: ShieldCheck,
-    title: "Enterprise Reliability",
+    title: "GEO SEO Agent",
     description:
-      "Every workflow we deploy includes built-in error handling, human-in-the-loop fallback mechanisms, and robust security protocols.",
+      "Optimizes your visibility across Google, ChatGPT, Gemini, and all major search and AI platforms.",
   },
 ];
 
@@ -41,7 +41,7 @@ export function Technology() {
       <div className="absolute top-[20%] right-[-10%] w-[600px] h-[600px] rounded-full bg-blue-500/[0.02] blur-[150px] pointer-events-none" />
 
       <div className="max-w-7xl w-full mx-auto px-6 md:px-10">
-        <div className="mb-20 md:mb-24 flex flex-col items-start md:items-center text-left md:text-center">
+        <div className="mb-12 md:mb-16 flex flex-col items-start md:items-center text-left md:text-center">
           <Reveal>
             <span className="inline-flex items-center gap-2.5 text-[11px] font-semibold tracking-[0.2em] uppercase text-accent/80 mb-7">
               <span className="w-10 h-px bg-accent/40" />
@@ -51,12 +51,12 @@ export function Technology() {
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className="text-3xl md:text-5xl lg:text-[3.5rem] font-extrabold tracking-[-0.03em] text-white">
-              AI Agent Technology.
+              Powered by Four Specialized AI Agents
             </h2>
           </Reveal>
           <Reveal delay={0.2} className="md:max-w-2xl mt-5">
             <p className="text-sm md:text-base text-zinc-400 leading-relaxed md:mx-auto">
-              We leverage modern AI agent architectures and orchestration layers to build production-grade systems that don&apos;t just generate text, but take autonomous action.
+              Every engagement is backed by enterprise level intelligence most agencies have never seen.
             </p>
           </Reveal>
         </div>

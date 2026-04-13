@@ -26,7 +26,7 @@ export function Proof() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.05] to-transparent" />
 
       <div className="max-w-7xl w-full mx-auto px-6 md:px-10">
-        <div className="mb-20 md:mb-24">
+        <div className="mb-12 md:mb-16">
           <Reveal>
             <span className="inline-flex items-center gap-2.5 text-[11px] font-semibold tracking-[0.2em] uppercase text-accent/80 mb-7">
               <span className="w-10 h-px bg-accent/40" />
