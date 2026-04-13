@@ -1,26 +1,36 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Reveal, StaggerContainer, StaggerItem } from "@/components/ui/reveal";
 
 const TESTIMONIALS = [
   {
     quote:
-      "GODZ-i built a lead gen system that completely removed me from the prospecting process. We've added 3 new retainers this month without me sending a single manual email.",
-    author: "Founder",
-    agency: "B2B Growth Agency",
+      "Christopher built our complete artist operations system including EPK, fan outreach automation, venue booking pipeline, and performance reporting all integrated. What took us months to figure out he delivered in a couple of weeks. The system is now handling our entire workflow.",
+    author: "Matthias Gautreaux",
+    title: "Founder",
+    company: "Ras Mundi",
+    url: "https://rasmundimusic.com",
+    photo: "/matthias_gautreaux.jpg",
   },
   {
     quote:
-      "Their content automation workflows are incredible. We reduced our delivery time by 40% across all our client accounts, which allowed us to scale our MRR without adding headcount.",
-    author: "COO",
-    agency: "Social Media Agency",
+      "I needed a marketing overhaul fast. Christopher did not just audit our marketing, he rebuilt it. The system he put in place is generating qualified leads consistently. He delivered enterprise level work on a timeline that works for a growing business.",
+    author: "Travis Gobson",
+    title: "Founder",
+    company: "Assemble at Ease",
+    url: "https://assembleatease.com",
+    photo: "/travis_gobson.png",
   },
   {
     quote:
-      "The internal operations systems they set up allowed us to finally stop putting out fires and focus on growth. The ROI from the time saved was immediate.",
-    author: "CEO",
-    agency: "Paid Ads Agency",
+      "Christopher built us a content production system that changed how we deliver to clients. Clients fill out a form and we generate professional content automatically. What used to take our team days now happens in hours. This is how modern agencies scale without hiring more people.",
+    author: "Andrew Knor",
+    title: "Founder",
+    company: "Zoom Out Social",
+    url: "https://zoomoutsocial.com",
+    photo: "/andrew_knor.jpg",
   },
 ];
 
@@ -43,7 +53,7 @@ export function Testimonials() {
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className="text-3xl md:text-5xl lg:text-[3.5rem] font-extrabold tracking-[-0.03em] text-white">
-              What Agencies Say.
+              What Clients Say.
             </h2>
           </Reveal>
         </div>
@@ -70,18 +80,37 @@ export function Testimonials() {
                   >
                     <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                   </svg>
-                  <p className="text-[15px] md:text-[16px] text-zinc-300 leading-relaxed font-medium">
+                  <p className="text-[14px] md:text-[15px] text-zinc-300 leading-relaxed">
                     &ldquo;{testimonial.quote}&rdquo;
                   </p>
                 </div>
 
-                <div className="relative z-10 pt-6 border-t border-white/[0.06]">
-                  <p className="text-sm font-bold text-white tracking-wide">
-                    {testimonial.author}
-                  </p>
-                  <p className="text-[11px] text-zinc-500 mt-1 tracking-[0.08em] uppercase font-semibold">
-                    {testimonial.agency}
-                  </p>
+                <div className="relative z-10 pt-6 border-t border-white/[0.06] flex items-center gap-4">
+                  <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-white/10 flex-shrink-0">
+                    <Image
+                      src={testimonial.photo}
+                      alt={testimonial.author}
+                      fill
+                      className="object-cover"
+                      sizes="48px"
+                    />
+                  </div>
+                  <div>
+                    <p className="text-sm font-bold text-white tracking-wide">
+                      {testimonial.author}
+                    </p>
+                    <p className="text-[11px] text-zinc-500 mt-0.5 tracking-[0.04em]">
+                      {testimonial.title},{" "}
+                      <a
+                        href={testimonial.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-accent/70 hover:text-accent transition-colors duration-200 underline underline-offset-2 decoration-accent/30 hover:decoration-accent/60"
+                      >
+                        {testimonial.company}
+                      </a>
+                    </p>
+                  </div>
                 </div>
               </motion.div>
             </StaggerItem>
